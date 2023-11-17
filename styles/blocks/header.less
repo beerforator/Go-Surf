@@ -1,41 +1,224 @@
-//main: style.less
+//main: ../style.less
 
 .header {
+    position: absolute;
+    z-index: 1;
     
-}
-
-.header_stuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     
+    height: 1024px;
+    width: 169px;
+    
+    padding-bottom: 45px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .logo_stuff {
-    
+    display: flex;
 }
 
-.logo {
+.panda-obj {
+    position: relative;
     
+    display: flex;
+    align-items: center;
+    font-size: 3.33rem;
+    
+    height: 2.816em;
+    
+    &--header {
+        position: absolute;
+        z-index: 3;
+        transform-origin: left top;
+        transform: rotate(-90deg);
+        top: 290px;
+        left: 0;
+    }
+}
+
+.panda-obj-text {
+    position: relative;
+    z-index: 2;
+    
+    //padding: .75rem 0;
+    margin-right: 32px;
+    
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 86px; /* 143.333% */
+    text-transform: uppercase;
+    
+    white-space: nowrap;
+    word-spacing: 36px;
+}
+
+.panda-obj-rectangle {
+    position: absolute;
+    z-index: 1;
+    
+    top: 0;
+    right: 0;
+    
+    height: 100%;
+    //width: 60%;
+    /* тут нужно либо текст привязывать 
+    к фигуре, либо регулировать ширину фигуры вручную */
+    width: 191px;
+    
+    background-color: #4AF6CD;
+    
+    &::before {
+        position: absolute;
+        z-index: 0;
+        content: '';
+        display: inline-block;
+        
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        
+        width: 20px;
+        height: 1px;
+        background-color: #ffffff;
+    }
 }
 
 .logo-before {
+    position: absolute;
+    z-index: 1;
+    left: -14px;
+    top: 0;
+        
+    font-family: inherit;
+    font-size: 11.11rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 156px; /* 78% */
+    text-transform: uppercase;
     
+    opacity: .065;
+}
+
+.header_stuff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
+    gap: 6px;
+    margin-bottom: 37px;
+}
+
+.nav_link img {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.nav_link-text {
+    text-align: center;
+    font-family: inherit;
+    font-size: .66rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 3px;
 }
 
 .search {
+    width: 24px;
+    height: 24px;
     
+    margin-bottom: 20px;
+}
+
+.search img {
+    object-fit: cover;
 }
 
 .data-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.data-day {
+    font-family: inherit;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 64px; /* 88.889% */
+    text-transform: uppercase;
+}
+
+.data_m_y {
+    display: flex;
+    gap: 20px;
+    
+    font-family: inherit;
+    font-size: .88rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px; /* 118.75% */
+    letter-spacing: 1.4px;
+
+}
+
+.data-m-y {
+    position: relative;
+    &:first-child::after {
+        position: absolute;
+        
+        top: 2px;
+        right: -10px;
+        
+        content: '';
+        display: inline-block;
+        
+        width: 1px;
+        height: 15px;
+        
+        background-color: #ffffff;
+    }
 }
 
 .location {
+    font-family: inherit;
+    font-size: .66rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.05px;
     
+    &::before {
+        content: '';
+        display: inline-block;
+        
+        width: 11px;
+        height: 14px;
+        
+        margin-right: 8px;
+        transform: translateY(2px);
+        
+        background-image: url("../../images/POI.svg");
+    }
 }
