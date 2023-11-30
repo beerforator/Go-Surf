@@ -1,0 +1,254 @@
+// main: ../style.less
+
+.shop {
+    margin-top: 270px;
+}
+
+.shop__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop_title {
+    position: relative;
+    
+    //width: 190px;
+    text-align: end;
+    
+    margin-left: 110px;
+    margin-right: auto;
+    //margin-bottom: 95px;
+}
+
+.shop-slider {
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 695px;
+    width: 100%;
+    
+    &::after {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        display: block;
+
+        top: 100px;
+        right: calc(-80px - .5rem);
+
+        width: 1052px;
+        height: 100%;
+
+        background: url("../../images/Shop%20Image.png");
+        background-size: cover;
+
+        //flex-shrink: 0;
+    }
+}
+
+// Side Text
+
+.slider_side-text {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 50px;
+}
+
+.text-style {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-rating {
+    font-family: inherit;
+    font-size: 1.77rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px; /* 125% */
+    text-transform: uppercase;
+    
+    &::after {
+        position: relative;
+        z-index: 5;
+        content: '99';
+        display: inline-block;
+        
+        font-size: 1rem;
+        transform: translate(5px, -12px);
+    }
+    
+    &::before {
+        position: relative;
+        z-index: 5;
+        content: '';
+        display: block;
+        
+        transform: translate(-15px, 0px);
+        
+        width: 186px;
+        height: 54px;
+
+        background: url("../../images/Star.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+// Surfboard
+
+.slider_surf-board {
+    position: relative;
+    z-index: 3;
+
+    transform: translate(0px, 30px);
+
+    width: 228px;
+    height: 695px;
+
+    background: url("../../images/Surfboard.png");
+    background-size: cover;
+
+    flex-shrink: 0;
+}
+
+.board-mark {
+    position: absolute;
+    z-index: 4;
+    
+    width: 20px;
+    height: 20px;
+    
+    background-color: #fff;
+    border-radius: 50%;
+        
+    &:nth-child(1) {
+        top: 300px;
+        left: -5px;
+    }
+    
+    &:nth-child(2) {
+        top: 610px;
+        left: 52px;
+    }
+    
+    &:nth-child(3) {
+        top: 200px;
+        left: 160px;
+    }
+    
+    &--mns {
+        &::after {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            display: block;
+            
+            margin: 4px;
+            
+            width: 12px;
+            height: 12px;
+
+            background: url("../../images/Plus.png");
+            background-size: cover;
+        }
+    }
+    
+    &--pls {
+        &::after {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            display: block;
+            
+            margin: 4px;
+            
+            width: 12px;
+            height: 12px;
+
+            background: url("../../images/Plus%20Copy.svg");
+            background-size: cover;
+        }
+    }
+    
+}
+
+.slider_side-elements {
+    position: relative;
+    z-index: 3;
+    
+    transform: translateY(30px);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    margin: auto 0 0;
+}
+
+.slider_side-elements .title {
+    color: #fff;
+    
+    font-family: inherit;
+    font-size: 1.55rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px; /* 142.857% */
+    text-transform: uppercase;
+}
+
+.elements {
+    display: flex;
+    gap: 60px;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+}
+
+.element-icon {
+    width: 103px;
+    height: 105px;
+    
+    &--br {
+        width: 120px;
+        height: 81px;
+    }
+    
+    object-fit: cover;
+    
+    margin-bottom: 30px;
+}
+
+.element-discr {
+    text-align: right;
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 122.222% */
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    
+    opacity: .5;
+    
+    margin-bottom: 5px;
+}
+
+.element-cost {
+    text-align: center;
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px; /* 222.222% */
+    text-transform: uppercase;
+}

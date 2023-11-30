@@ -1,0 +1,259 @@
+// main: ../style.less
+
+.page-slider {
+    margin-top: 270px;
+    margin-bottom: 30px;
+}
+
+.page-slider__inner {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.page-slider_title {
+    position: relative;
+    
+    //width: 190px;
+    text-align: end;
+    
+    margin-left: 110px;
+    margin-right: auto;
+}
+
+// page-slider Preview
+
+.page-slider_preview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 95px;
+    
+    height: 780px;
+    width: 100%;
+    
+    overflow: visible;
+    
+    &--travel {
+        &::before {
+            position: absolute;
+            z-index: 0;
+            content: '';
+            display: block;
+
+            top: 20px;
+            left: calc(-133px - .5rem);
+
+            width: 1113px;
+            height: 100%;
+
+            background: url("../../images/Travel%20Image%20Copy.png");
+            background-size: cover;
+
+            flex-shrink: 0;
+        }
+
+        &::after {
+            position: absolute;
+            z-index: 4;
+            content: '';
+            display: block;
+
+            bottom: -78px;
+            right: calc(-80px - .5rem);
+
+            width: 723px;
+            height: 377px;
+
+            background: url("../../images/bit.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    &--sleep {
+        &::before {
+            position: absolute;
+            z-index: 0;
+            content: '';
+            display: block;
+
+            top: 20px;
+            left: calc(-133px - .5rem);
+
+            width: 1096px;
+            height: 100%;
+
+            background: url("../../images/Sleep%20Image.png");
+            background-size: cover;
+
+            flex-shrink: 0;
+        }
+
+        &::after {
+            position: absolute;
+            z-index: 4;
+            content: '';
+            display: block;
+
+            bottom: -78px;
+            right: calc(-80px - .5rem);
+
+            width: 496px;
+            height: 414px;
+
+            background: url("../../images/gama.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.preview_text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    //width: ;
+    
+    &:first-child {
+        text-align: end;
+        margin-top: 70px;
+    }
+    
+    &--travel {
+        //width: 535px;
+        &::after {
+            position: absolute;
+            z-index: 5;
+            content: '';
+            display: inline-block;
+
+            top: 30px;
+            left: 20em;
+
+            width: 52px;
+            height: 46px;
+
+            background: url("../../images/virgin.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }   
+    
+    &--sleep {
+        &::after {
+            position: absolute;
+            z-index: 5;
+            content: '';
+            display: inline-block;
+
+            top: 30px;
+            left: 12em;
+
+            width: 186px;
+            height: 54px;
+
+            background: url("../../images/Star.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+// page-slider Advantages
+
+.page-slider_advantages {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    gap: 55px;
+    
+    &--travel {
+        &::after {
+            position: absolute;
+            z-index: 5;
+            content: '';
+            display: inline-block;
+
+            top: 30px;
+            right: calc(-80px - .5rem);
+
+            width: 321px;
+            height: 564px;
+
+            background: url("../../images/cocktail_PNG33.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    &--sleep {
+        &::after {
+            position: absolute;
+            z-index: 5;
+            content: '';
+            display: inline-block;
+
+            top: 30px;
+            right: calc(-80px - .5rem);
+
+            width: 187px;
+            height: 265px;
+
+            background: url("../../images/Frangipani.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.advantage {
+    position: relative;
+    display: flex;
+    gap: 18px;
+}
+
+.mod {
+    position: absolute;
+    right: 0;
+    top: 2.6em;
+}
+
+.advantage_btns {
+    //width: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.advantage_btn {
+    text-align: right;
+    font-family: inherit;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px; /* 122.222% */
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    
+    color: rgba(74, 246, 205, 1);
+}
+
+.advantage_ps {
+    color: #FFF;
+    
+    text-align: right;
+    transform: translateY(-10px);
+    
+    font-family: inherit;
+    font-size: .77rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px; /* 257.143% */
+    letter-spacing: 5.25px;
+    text-transform: uppercase;
+}

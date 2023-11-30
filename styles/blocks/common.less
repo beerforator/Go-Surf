@@ -13,15 +13,43 @@ body {
     background-color: #171919;
 }
 
+// Bgrnd Decor
+
+.bgrnd-decor {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.bgrnd-decor-item {
+    position: relative;
+    z-index: -1;
+    
+    width: 1px;
+    height: 2500px;
+    margin-left: 31%;
+    
+    background-color: rgba(255, 255, 255, 0.067);
+    
+    &:first-child {
+        margin-left: 168px;
+    }
+}
+
 h1, h2, h3, h4, h5, h6, a, li {
     margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
     color: #ffffff;
     text-decoration: none;
+    
+//    display: flex;
+//    flex-direction: column;
 }
 
 li, ul {
@@ -35,17 +63,19 @@ li, ul {
 }
 
 .container {
+    //position: relative;
+    
+//    width: 100%;
+//    max-width: 1192px;
+//    transform: translateX(52px);
+//    padding: 0 1rem;
+    
     width: 100%;
-    max-width: 1192px;
+    
+    padding: 0 calc(80px + .5rem) 0 calc(132px + .5rem);
+
     margin: 0 auto;
-    transform: translateX(52px);
-    
-    border: 1px solid white;
-    
-    padding: 0 1rem;
-    
-    //
-    height: 500px;
+    //border: 1px solid white;
 }
 
 .hw-before {
@@ -62,7 +92,35 @@ li, ul {
         opacity: 0.5;
         background: #FFF;
     }
+    
+    &--empty::before {
+        margin-right: 0;
+        margin-bottom: 0; 
+    }
 }
+
+.hw-after {
+    &::after {
+        content: "";
+        display: inline-block;
+        
+        margin-left: 22px;
+        margin-bottom: 6px; 
+        
+        width: 80px;
+        height: 1px;
+        
+        opacity: 0.5;
+        background: #FFF;
+    }
+    
+    &--empty::after {
+        margin-right: 0;
+        margin-bottom: 0; 
+    }
+}
+
+// Заголовки
 
 h2 {
     font-family: inherit;
@@ -78,7 +136,7 @@ h3 {
     font-size: 2.22rem;
     font-style: normal;
     font-weight: 800;
-    line-height: 86px;
+    line-height: 36px;
     text-transform: uppercase;
 }
 
@@ -92,4 +150,263 @@ h4 {
     text-transform: uppercase;
     
     opacity: .5;
+}
+
+h5 {
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 122.222% */
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.h5--vertical {
+    transform-origin: left top; 
+    transform: rotate(-90deg);
+}
+
+.h5--vertical--preview {
+    text-align: end;
+    writing-mode: vertical-rl;
+    opacity: 0.5;
+    transform: rotate(180deg);
+}
+
+// Panda Obj
+
+.panda-obj {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    font-size: 3.33rem;
+    
+    padding-right: 32px;
+    
+    height: 2.816em;
+    
+    &--header {
+        position: absolute;
+        z-index: 3;
+        transform-origin: left top;
+        transform: rotate(-90deg);
+        top: 285px;
+        left: 0;
+    }
+    
+    &--surf {
+        visibility: hidden;
+        
+        &--active {
+            visibility: visible;
+        }
+        
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        padding-right: 0;
+        
+        height: 80px;
+        
+        &::after {
+            position: relative;
+            z-index: 3;
+            
+            content: '';
+            display: inline-block;
+            
+            width: 25px;
+            height: 21px;
+            
+            margin: 0 16px;
+            
+            background-image: url("../../images/Arrow.svg");
+            background-size: cover;
+        }
+    }
+    
+    &--page-slider {
+        position: relative;
+        height: 80px;
+        
+        margin: 70px auto 0;
+        padding-right: 0;
+        
+        &::after {
+            position: relative;
+            z-index: 3;
+            
+            content: ' ';
+            display: inline-block;
+            
+            width: 25px;
+            height: 21px;
+            
+            margin: 0 16px;
+                        
+            background-image: url("../../images/Arrow.svg");
+            background-size: cover;
+        }
+    }
+    
+    &--shop {
+        position: relative;
+        height: 80px;
+        width: 234px;
+        
+        margin: 0 auto 0 0;
+        
+        &::after {
+            position: relative;
+            z-index: 3;
+            
+            content: ' ';
+            display: inline-block;
+            
+            width: 25px;
+            height: 21px;
+            
+            margin: 0 16px;
+                        
+            background-image: url("../../images/Arrow.svg");
+            background-size: cover;
+        }
+    }
+    
+    &--footer {
+        font-size: 1.5rem;
+        
+        height: 64px;
+        position: relative;
+        z-index: 3;
+        transform-origin: left top;
+    }
+}
+
+.panda-obj-text {
+    position: relative;
+    z-index: 3;
+    
+    //padding: .75rem 0;
+    //margin-right: 32px;
+    
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 86px; /* 143.333% */
+    text-transform: uppercase;
+    
+    white-space: nowrap;
+    word-spacing: 30px;
+}
+
+.panda-obj-rectangle {
+    position: absolute;
+    z-index: 2;
+    
+    top: 0;
+    right: 0;
+    
+    height: 100%;
+    //width: 60%;
+    /* тут нужно либо текст привязывать 
+    к фигуре, либо регулировать ширину фигуры вручную */
+    width: 191px;
+    
+    background-color: #4AF6CD;
+    
+    &::before {
+        position: absolute;
+        z-index: 2;
+        content: '';
+        display: inline-block;
+        
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+        
+        width: 20px;
+        height: 1px;
+        background-color: #ffffff;
+    }
+    
+    &--surf {
+        width: 168px;
+    }
+    
+    &--page-slider {
+        &--travel {
+            width: 200px;
+        }
+        
+        &--sleep {
+            width: 168px;
+        }
+    }
+    
+    &--shop {
+        width: 112px;
+    }
+    
+    &--footer {
+        width: 111px;
+    }
+}
+
+// Slider Btns
+
+.slider_btns {
+    width: 69px;
+    display: flex;
+    gap: 18px;
+    
+    &--op {
+        opacity: .25;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    
+    &--mrgn {
+        margin-top: 30px;
+    }
+}
+
+.slider_btn {
+    width: 25px;
+    height: 21px;
+    
+    &--prev {
+        transform: rotate(180deg) translateY(1px);
+    }
+}
+
+// Tile Opac
+
+.title-op {
+    position: absolute;
+    z-index: 1;
+    
+    font-family: inherit;
+    font-size: 11.11rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 156px; /* 78% */
+    text-transform: uppercase;
+    
+    opacity: .02;
+    
+    &--surf {
+        top: 45px;
+        left: -288px;
+    }
+    
+    &--page-slider {
+        top: 45px;
+        left: -290px;
+    }
 }
