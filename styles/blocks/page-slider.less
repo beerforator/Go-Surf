@@ -240,7 +240,8 @@
     }
     
     @media screen and (max-width: 580px) {
-        //padding: 0 calc(20px + .5rem) 0 calc(33px + .5rem);
+        grid-template-columns: repeat(2, 50%);
+        gap: 25px;
     }
 }
 
@@ -248,6 +249,10 @@
     position: relative;
     display: flex;
     gap: 18px;
+    
+    @media screen and (max-width: 580px) {
+        gap: 8px;
+    }
 }
 
 .mod {

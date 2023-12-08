@@ -8,6 +8,10 @@
 .intro__inner {
     height: 1024px;
     position: relative;
+    
+    @media screen and (max-width: 580px) {
+        height: 100vh;
+    }
 }
 
 // Image
@@ -24,7 +28,7 @@
     
     overflow: hidden;
     
-    background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.43) 0%, #0F0F0F 100%), url(../../images/Surf_The_Wave.jpg) no-repeat center center / cover;
+    background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.43) 0%, #0F0F0F 100%), url("../../images/Surf_The_Wave.jpg") no-repeat center center / cover;
     background-position: 50% 0%;
 }
 
@@ -80,6 +84,10 @@
     
     padding: 40px 0;
     margin-right: 80px;
+    
+    @media screen and (max-width: 780px) {
+        margin-right: 30px;    
+    }
 }
 
 .page_slider_stuff {
