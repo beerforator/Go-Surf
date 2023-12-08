@@ -24,6 +24,10 @@
         background-size: cover;
         
         opacity: .02;
+        
+        @media screen and (max-width: 770px) {
+            display: none;
+        }
     }
 }
 
@@ -44,6 +48,14 @@
     
     margin-left: 110px;
     margin-right: auto;
+    
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (max-width: 780px) {
+        align-items: flex-start;
+        margin-left: 40px;
+    }
 }
 
 // World Map
@@ -57,6 +69,10 @@
     margin: 0 auto;
     
     margin-bottom: 59px;
+    
+    @media screen and (max-width: 780px) {
+        margin-bottom: 100px;
+    }
 }
 
 .world-map {
@@ -86,6 +102,11 @@
     transform: translateY(30px);
     
     text-align: end;
+    
+    @media screen and (max-width: 1024px) {
+        transform: translateY(-15px);
+        gap: 1%;
+    }
 }
 
 .marks {

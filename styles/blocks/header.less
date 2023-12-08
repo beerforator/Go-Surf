@@ -1,8 +1,6 @@
 //main: ../style.less
 
 .header {
-    //visibility: hidden;
-    
     position: absolute;
     z-index: 1;
     
@@ -17,6 +15,10 @@
     
     padding-bottom: 45px;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
+    
+    @media screen and (max-width: 770px) {
+        display: none;
+    }
 }
 
 .logo_stuff {

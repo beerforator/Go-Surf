@@ -22,6 +22,11 @@
     
     margin-left: 110px;
     margin-right: auto;
+    
+    @media screen and (max-width: 780px) {
+        align-items: flex-start;
+        margin-left: 40px;
+    }
 }
 
 // page-slider Preview
@@ -117,6 +122,9 @@
             }
         }
     }
+    @media screen and (max-width: 780px) {
+        margin-top: 30px;
+    }
 }
 
 .preview_text {
@@ -168,6 +176,10 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        gap: 1%;
     }
 }
 
@@ -221,6 +233,14 @@
         display: grid;
         grid-template-columns: repeat(2, 40%);
         grid-template-rows: repeat(2, 1fr);
+        
+        &::after {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 580px) {
+        //padding: 0 calc(20px + .5rem) 0 calc(33px + .5rem);
     }
 }
 
@@ -261,7 +281,7 @@
 .advantage_ps {
     position: absolute;
     right: 0;
-    top: 2.6em;
+    top: 3em;
     
     color: #FFF;
     

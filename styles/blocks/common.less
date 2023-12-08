@@ -6,6 +6,14 @@ html {
     @media screen and (max-width: 1024px) {
         font-size: 16px;
     }
+    
+    @media screen and (max-width: 770px) {
+        font-size: 14px;
+    }
+    
+    @media screen and (max-width: 580px) {
+        font-size: 10px;
+    }
 }
 
 body {
@@ -17,15 +25,22 @@ body {
     background-color: #171919;
 }
 
+main {
+    width: 100%;
+}
+
 // Bgrnd Decor
 
 .bgrnd-decor {
+    visibility: hidden;
     position: absolute;
     z-index: -1;
     display: flex;
     
     width: 100%;
     height: 100%;
+    
+    //display: none;
 }
 
 .bgrnd-decor-item {
@@ -52,8 +67,6 @@ h1, h2, h3, h4, h5, h6, a, li {
     color: #ffffff;
     text-decoration: none;
     white-space: nowrap;
-//    display: flex;
-//    flex-direction: column;
 }
 
 li, ul {
@@ -69,19 +82,17 @@ li, ul {
 }
 
 .container {
-    //position: relative;
-    
-//    width: 100%;
-//    max-width: 1192px;
-//    transform: translateX(52px);
-//    padding: 0 1rem;
-    
     width: 100%;
-    
     padding: 0 calc(80px + .5rem) 0 calc(132px + .5rem);
-
     margin: 0 auto;
-    //border: 1px solid white;
+    
+    @media screen and (max-width: 1240px) {
+        padding: 0 calc(40px + .5rem) 0 calc(66px + .5rem);
+    }
+    
+    @media screen and (max-width: 580px) {
+        padding: 0 calc(20px + .5rem) 0 calc(33px + .5rem);
+    }
 }
 
 .hw-before {
@@ -102,6 +113,12 @@ li, ul {
     &--empty::before {
         margin-right: 0;
         margin-bottom: 0; 
+    }
+    
+    &--surf::before {
+        @media screen and (max-width: 580px) {
+            display: none;
+        }   
     }
 }
 
@@ -133,8 +150,12 @@ h2 {
     font-size: 4.44em;
     font-style: normal;
     font-weight: 800;
-    line-height: 86px;
+    line-height: 4.7rem;
     text-transform: uppercase;
+    
+    @media screen and (max-width: 780px) {
+        font-size: 40px;
+    }
 }
 
 h3 {
@@ -291,9 +312,9 @@ h5 {
     }
     
     &--footer {
-        font-size: 28px;
+        //font-size: 28px;
         
-        height: 64px;
+        height: 100%;
         position: relative;
         z-index: 3;
         transform-origin: left top;
@@ -366,7 +387,7 @@ h5 {
     }
     
     &--footer {
-        width: 111px;
+        width: 140px;
     }
 }
 
@@ -420,5 +441,19 @@ h5 {
     &--page-slider {
         top: 45px;
         left: -290px;
+    }
+    
+    @media screen and (max-width: 1240px) {
+        left: -220px;
+    }
+    
+    @media screen and (max-width: 780px) {
+        font-size: 80px;
+        transform: translate(100px,-45px);
+    }
+    
+    @media screen and (max-width: 580px) {
+        font-size: 60px;
+        transform: translate(135px,-60px);
     }
 }

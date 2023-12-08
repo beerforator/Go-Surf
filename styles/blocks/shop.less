@@ -2,6 +2,8 @@
 
 .shop {
     margin-top: 270px;
+    
+    //overflow: hidden; 
 }
 
 .shop__inner {
@@ -17,7 +19,11 @@
     
     margin-left: 110px;
     margin-right: auto;
-    //margin-bottom: 95px;
+    
+    @media screen and (max-width: 780px) {
+        align-items: flex-start;
+        margin-left: 40px;
+    }
 }
 
 .shop-slider {
@@ -44,14 +50,27 @@
 
         background: url("../../images/Shop%20Image.png");
         background-size: cover;
-
+        background-size: contain;
+        background-repeat: no-repeat;
         //flex-shrink: 0;
+        
     }
     
     @media screen and (max-width: 1240px) {
         margin-top: 70px;
         flex-direction: column;
         height: auto;
+        
+        &::after {
+            right: calc(-40px - .5rem);
+            top: 450px;
+        }
+    }
+    
+    @media screen and (max-width: 590px) {    
+        &::after {
+            right: calc(-20px - .5rem);
+        }
     }
 }
 
