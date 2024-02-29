@@ -224,7 +224,7 @@
     width: 1440px;
     height: 860px;
     
-    overflow: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -254,8 +254,10 @@
         opacity: .85;
     }
     
-    &--active:before {
-        opacity: .3;
+    &--active {
+        &::before {
+            opacity: .3;
+        }
     }
         
     //===========
